@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core';
 import { Grid, Typography, Card, CardContent, CardMedia, IconButton, Tooltip } from '@material-ui/core';
 
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
-import PlayDisabledIcon from '@mui/icons-material/PlayDisabled';
+
+
+import { ArrowLeft, ArrowRight, PauseCircleFilled, PlayCircleFilled } from '@material-ui/icons';
+
 
 
 
@@ -137,14 +137,14 @@ return (
 {isPlaying ? (
 <Tooltip title="Pause">
 <IconButton className={classes.playPauseButton} onClick={handlePlayPauseClick}>
-<PlayDisabledIcon sx={{ color: 'red' , fontSize: 50}}/>
+<PauseCircleFilled style={{ color: 'red' , fontSize: 50}}/>
 </IconButton>
 </Tooltip>
 ) : (
 <Tooltip title="Play">
 
 <IconButton className={classes.playPauseButton} onClick={handlePlayPauseClick}>
-<PlayCircleOutlineIcon  sx={{ color: 'green' , fontSize: 50}}/>
+<PlayCircleFilled  style={{ color: 'green' , fontSize: 50}}/>
 </IconButton>
 </Tooltip>
 )}
@@ -152,7 +152,7 @@ return (
 <Grid container direction="row" justify="center" alignItems="center">
 <Grid item>
 <IconButton aria-label="previous" onClick={handlePrevClick}>
-<ArrowBackIcon   sx={{ color: 'blue' , fontSize: 50}}/>
+<ArrowLeft  style={{ color: 'blue' , fontSize: 50}}/>
 </IconButton>
 </Grid>
 {images.map((image, index) => (
@@ -166,7 +166,7 @@ onClick={() => handleThumbnailClick(index)}
 </Grid>
 ))}<Grid item>
 <IconButton aria-label="next" onClick={handleNextClick}>
-<ArrowForwardIcon sx={{ color: 'blue' , fontSize: 50}}/>
+<ArrowRight style={{ color: 'blue' , fontSize: 50}} />
 </IconButton>
 </Grid>
 </Grid>
