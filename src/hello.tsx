@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { makeStyles } from '@material-ui/core';
-import { Grid, Typography, Card, CardContent, CardMedia, IconButton, Tooltip } from '@material-ui/core';
 
+import { makeStyles } from '@material-ui/core';
+// import { Grid, Typography, Card, CardContent, CardMedia, IconButton, Tooltip } from '@material-ui/core';
+
+import { Grid, Typography, Card, CardContent, CardMedia, IconButton, Tooltip } from '@material-ui/core';
 
 
 import { ArrowLeft, ArrowRight, PauseCircleFilled, PlayCircleFilled } from '@material-ui/icons';
